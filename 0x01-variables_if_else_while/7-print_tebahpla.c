@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  * Description: prints the lowercase alphabet in reverse
- * return: Always 0
+ * Return: Always 0
  */
 
 int main(void)
