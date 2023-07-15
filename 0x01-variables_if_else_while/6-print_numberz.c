@@ -11,7 +11,7 @@ int main() {
 	int num;
 
 	for (num = 0; num <= 9; num++) {
-		putchar(num +'O');
+		putchar(num +'0');
 	}
 
 	putchar('\n');
