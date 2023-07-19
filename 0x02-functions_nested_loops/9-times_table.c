@@ -8,19 +8,19 @@ void times_table(void)
 {
 	int x, y, z, j, k;
 
-	for (x = 0; x <= 9; x++)
+	for (x = 0; x < 10; x++)
 	{
-		for (y = 0; y <= 9; y++)
+		for (y = 0; y < 10; y++)
 		{
 			z = x * y;
-			if (z > 9)
+			if (z > 10)
 			{
 				j = z % 10;
 				k = (z - j) / 10;
 				_putchar(',');
 				_putchar(' ');
-				_putchar(j + '0');
 				_putchar(k + '0');
+				_putchar(j + '0');
 			}
 			else
 			{
