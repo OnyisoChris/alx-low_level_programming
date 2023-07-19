@@ -10,10 +10,10 @@ void times_table(void)
 
 	for (x = 0; x < 10; x++)
 	{
-		for (y = 0; y < 10; y++)
+		for (y = 0; y <= 10; y++)
 		{
 			z = x * y;
-			if (z > 10)
+			if (z >= 10)
 			{
 				j = z % 10;
 				k = (z - j) / 10;
