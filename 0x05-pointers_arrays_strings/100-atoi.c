@@ -24,13 +24,13 @@ int _atoi(char *s)
 			n = 1;
 			j = (j * 10) + (s[i] - '0');
 			i++;
+		}
 			if (n == 1)
 			{
 				break;
 			}
 			i++;
-		}
-		j *= m;
-		return (j);
 	}
+	j *= m;
+	return (j);
 }
