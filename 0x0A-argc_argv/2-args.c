@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - prints all arguments it receives
+ * main - prints all arguments received
  * @argc: argument count
  * @argv: argument vector
- * Retun: 0
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
