@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main: prints minimum number of coins
+ * main - prints minimum number of coins
  * cal_coins - calculating number of coins
  * @cents: cents to be computed
  * Return: The minimum number of coins
