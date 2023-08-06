@@ -3,19 +3,14 @@
 
 /**
  * main - prints minimum number of coins
- * cal_coins - calculating number of coins
- * @cents: cents to be computed
+ * @argc: counter for number of arguments supplied
+ * @argv: array of pointers to the arguments
  * Return: The minimum number of coins
  */
 
-int cal_coins(int cents);
-
 int main(int argc, char *argv[])
 {
-	int coins, cents;
-
-	coins = 0;
-	cents = 0;
+	int coins, cents = 0;
 
 	if (argc != 2)
 	{
@@ -25,46 +20,31 @@ int main(int argc, char *argv[])
 
 	cents = atoi(argv[1]);
 
-	if (cents < 0)
+	while (cents > 0)
 	{
-		printf("0\n");
-		return (0);
+		coins++;
+		if ((cents - 25) >= 0)
+		{
+			cents -= 25;
+			continue;
+		}
+		if ((cents - 10) >= 0)
+		{
+			cents -= 10;
+			continue;
+		}
+		if ((cents - 5) >= 0)
+		{
+			cents -= 5;
+			continue;
+		}
+		if ((cents - 2) >= 0)
+		{
+			cents -= 2;
+			continue;
+		}
+		cents--;
 	}
-	coins = cal_coins(cents);
 	printf("%d\n", coins);
 	return (0);
-}
-
-/**
- * cal_coins - calculating number of coins
- * @cents: cents to be computed
- * Return: The minimum number of coins
- */
-
-int cal_coins(int cents)
-{
-	int coins = 0;
-
-	while (cents >= 25)
-	{
-		coins++;
-		cents -= 25;
-	}
-	while (cents >= 10)
-	{
-		coins++;
-		cents -= 10;
-	}
-	while (cents >= 5)
-	{
-		coins++;
-		cents -= 5;
-	}
-	while (cents >= 1)
-	{
-		coins++;
-		cents -= 1;
-	}
-
-	return (coins);
 }
