@@ -29,18 +29,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
+	for (j = 0; s1[j] != '\0'; j++)
+		result[j] = s1[j];
+
 	if (n >= s2length)
 	{
-		for (j = 0; s1[j] != '\0'; j++)
-			result[j] = s1[j];
 		for (j = 0; s2[j] != '\0'; j++)
-			result[j] = s2[j];
-		result[s1length + j] = '\n';
+			result[s1length + j] = s2[j];
+		result[s1length + j] = '\0';
 	}
 	else
 	{
-		for (j = 0; s1[j] != '\0'; j++)
-			result[j] = s1[j];
 		for (j = 0; j < n; j++)
 			result[s1length + j] = s2[j];
 		result[s1length + j] = '\0';
