@@ -2,12 +2,6 @@
 #define DOG_H
 #include <stdio.h>
 
-/**
- *
- *
- *
- */
-
 struct dog
 {
 	char *name;
