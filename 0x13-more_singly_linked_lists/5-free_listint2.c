@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * void free_listint2 - frees a listint_t list
+ * free_listint2 - frees a listint_t list
  * @head: pointer to list to be freed
  */
 
@@ -12,12 +12,10 @@ void free_listint2(listint_t **head)
 	if (head == NULL)
 		return;
 
-	while (*head)
+	while (*head != NULL)
 	{
-		tmp = (*head)->next;
-		free(*head);
-		*head = tmp;
+		tmp = (*head);
+		*head = (*head)->next;
+		free(tmp);
 	}
-
-	*head = NULL;
 }
